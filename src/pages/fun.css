@@ -1,0 +1,150 @@
+/* Estilos generales para el contenedor y las imágenes */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem; 
+    padding: 20px;
+  }
+  
+  .responsive-img {
+    margin: 3rem;
+    margin-top: 3rem;
+    width: 20rem;
+    max-width: 800px;
+    height: auto;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .responsive-img:hover {
+    transform: scale(1.07); /* Aumenta el tamaño en hover */
+  }
+  
+  @media (max-width: 600px) {
+    .responsive-img {
+      width: 100px;
+    }
+  }
+
+  /*Simon Says*/
+  
+  h5{
+    margin-bottom: 20px;
+  }
+  .game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  #game-board {
+    display: grid;
+    grid-template-columns: repeat(2, 150px);
+    gap: 10px;
+    
+  }
+  
+  .color-button {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  #green { background-color: green; }
+  #red { background-color: red; }
+  #yellow { background-color: #ffc243; }
+  #blue { background-color: blue; }
+  
+  #start-button {
+    font-family: Poppins, sans-serif;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #5430B8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: none;
+    color: white;
+    transition: all 0.3s ease;
+  }
+
+  #start-button:hover {
+    background-color: #ffffff; 
+    color: #5430B8;
+    border-radius: 10px;
+  }
+  
+  .active {
+    opacity: 0.5;
+  }
+  
+  
+  /*Whac A Mole*/
+  .game-container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin: 20px 0;
+  }
+  
+  .game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .hole {
+    width: 100px;
+    height: 100px;
+    background-color: #5b5e7675;
+    border-radius: 10px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .hole.active {
+    background-color: #4815e294;
+  }
+  
+  .mole {
+    width: 50px;
+    height: 50px;
+    background-color: #ffc243;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: pop-up 0.5s ease-in-out;
+  }
+  
+  @keyframes pop-up {
+    0% {
+      transform: translateX(-50%) translateY(10px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(-50%) translateY(-20px);
+      opacity: 1;
+    }
+  }
+  
+  

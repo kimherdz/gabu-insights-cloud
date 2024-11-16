@@ -1,0 +1,282 @@
+/*Home*/
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f7f8fe;
+}
+
+h1 {
+  margin-top: 20px;
+}
+
+h2, h3 {
+    color: #5430B8;
+    font-size: 2rem;
+    
+    
+}
+h4{
+  text-align: center;
+  color: #5430B8;
+  font-size: 2rem;
+}
+
+.home-container {
+  padding: 20px;
+  margin: 20px auto; 
+  max-width: 90%;
+}
+
+.right-aligned {
+    text-align: right; 
+    margin-bottom: 20px;
+}
+
+.left-aligned {
+    text-align: left; 
+    margin-bottom: 20px;
+}
+
+.text-box1, .text-box2 {
+  font-size: 1.17rem;
+  padding: 20px; 
+  margin: 0 auto; 
+  width: 100%;
+  max-width: 60rem;
+  height: auto; 
+  background-color: #f0ecff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  color: #5b5e76;
+}
+
+
+@media (max-width: 768px) {
+  h2, h3 {
+    font-size: 1.875rem; /* Disminuye el tamaño de las fuentes en pantallas medianas */
+  }
+  
+  .text-box1, .text-box2 {
+    font-size: 0.875rem; /* Ajusta el tamaño de la fuente en dispositivos móviles */
+    padding: 15px;
+    width: 100%; /* Usa el 100% del ancho disponible */
+    max-width: none;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2, h3 {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* Parenting */
+.parenting-container {
+  padding: 20px;
+  margin: auto;
+}
+
+.center-title {
+  text-align: center;
+  padding: 20px;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start; 
+  padding: 20px;
+  flex-wrap: wrap; /* Permite que los elementos se muevan a una nueva línea en pantallas pequeñas */
+}
+
+/* Gráfica */
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 48%; /* Ajusta a 48% para que haya un pequeño espacio entre los contenedores en pantallas medianas */
+  margin: 1rem;
+}
+
+.centered-text {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+#chart {
+  flex: 1;
+  width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+/* Insights */
+.comments-section {
+  flex: 1; 
+  padding: 20px;
+  font-size: 1.2rem; /* Ajusta el tamaño para adaptarse mejor a pantallas pequeñas */
+  width: 100%; /* Ajuste de ancho en pantallas pequeñas */
+  max-width: 30rem;
+}
+
+.comments-section ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.comments-section li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #ffc243;
+  height: auto; /* Cambia la altura fija para evitar que el texto se desborde */
+  border-radius: 15px;
+  margin: 10px;
+  text-align: left;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .chart-container, .comments-section {
+    width: 100%; /* Acomoda el ancho de cada sección en pantallas medianas */
+  }
+  
+  .content-container {
+    flex-direction: column; /* Cambia la orientación a columna en pantallas medianas */
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .center-title {
+    font-size: 1.5rem; /* Ajusta el tamaño de título para pantallas pequeñas */
+  }
+
+  .comments-section li {
+    font-size: 1rem;
+    padding: 8px; /* Disminuye el padding para pantallas pequeñas */
+  }
+}
+
+/* Tiempo de Juego */
+#weekly-chart,
+#coexistence-chart {
+  padding: 20px;
+  width: 100%; /* Asegura que los gráficos ocupen todo el ancho disponible */
+  max-width: 800px; /* Define un ancho máximo para evitar que se estiren demasiado en pantallas grandes */
+  margin: auto; /* Centra los gráficos en su contenedor */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  #weekly-chart,
+  #coexistence-chart {
+    padding: 15px; /* Ajusta el padding para pantallas más pequeñas */
+    max-width: 100%; /* Permite que los gráficos ocupen todo el ancho en pantallas más pequeñas */
+  }
+}
+
+@media (max-width: 480px) {
+  #weekly-chart,
+  #coexistence-chart {
+    padding: 10px; /* Reduce el padding aún más para pantallas pequeñas */
+  }
+}
+
+
+/* Foro Gabu */
+.forum-container {
+  padding: 20px;
+}
+
+.forum-page {
+  padding: 20px;
+  max-width: 1200px; /* Aumentado para pantallas más grandes */
+  margin: 0 auto;
+}
+
+.content-container {
+  display: flex; /* Utiliza flexbox para alinear publicaciones y formulario */
+  justify-content: space-between; /* Espacio entre publicaciones y formulario */
+  align-items: flex-start; /* Alinea elementos al principio */
+}
+
+.post-section {
+  flex: 1; /* Permite que la lista ocupe el espacio disponible */
+  margin-right: 20px; /* Espacio entre la lista y el formulario */
+}
+
+.section-title {
+  font-size: 1.5em;
+  margin-top: 20px;
+  color: #5430B8;
+}
+
+.post-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.post-item {
+  background-color: #fdecc8;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  transition: transform 0.2s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.post-item:hover {
+  transform: scale(1.02);
+}
+
+.post-user {
+  color: #5430B8;
+  font-weight: bold;
+}
+
+.post-content {
+  margin-top: 5px;
+  line-height: 1.6;
+}
+
+/* Formulario para nuevos posts */
+.add-post-container {
+  width: 300px; /* Ancho fijo para la sección de agregar publicaciones */
+}
+
+.post-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.post-input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  font-size: 1em;
+  resize: vertical;
+  background-color: #F0ECFF;
+}
+
+.post-button {
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+  background-color: #5430B8;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.post-button:hover {
+  background-color: #e5ddff;
+  color: #5430B8;
+}
