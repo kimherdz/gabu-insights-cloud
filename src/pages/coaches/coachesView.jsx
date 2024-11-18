@@ -21,7 +21,7 @@ const CoachView = () => {
   useEffect(() => {
     const fetchChildren = async () => {
       try {
-        const response = await fetch('http://localhost:3001/children');
+        const response = await fetch('http://34.122.229.106:3001/children');
         const data = await response.json();
         setChildren(data);
       } catch (error) {
@@ -50,7 +50,7 @@ const CoachView = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:3001/attendances', {
+      const response = await fetch('http://34.122.229.106:3001/attendances', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

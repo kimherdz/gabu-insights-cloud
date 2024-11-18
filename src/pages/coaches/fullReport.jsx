@@ -18,7 +18,7 @@ const CoachView = () => {
     const fetchAttendances = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:3001/coach/attendances', {
+        const response = await axios.get('http://34.122.229.106:3001/coach/attendances', {
           headers: { Authorization: `Bearer ${token}` },
         });
         const formattedData = response.data.map(attendance => ({
@@ -67,7 +67,7 @@ const CoachView = () => {
     try {
       const token = localStorage.getItem('token');
       await axios.put(
-        'http://localhost:3001/coach/attendance/update',
+        'http://34.122.229.106:3001/coach/attendance/update',
         {
           id: updatedRow.id,
           data: {

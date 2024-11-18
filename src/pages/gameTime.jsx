@@ -9,7 +9,7 @@ const GameTime = () => {
   // Función para obtener horas de juego
   const fetchHoursData = async () => {
     try {
-      const response = await fetch('http://localhost:3001/game/hours', {
+      const response = await fetch('http://34.122.229.106:3001/game/hours', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`, // Agregar el token en los headers
         },
@@ -29,7 +29,7 @@ const GameTime = () => {
   // Función para obtener datos de convivencia
   const fetchCoexistenceData = async () => {
     try {
-      const response = await fetch('http://localhost:3001/game/coexistence', {
+      const response = await fetch('http://34.122.229.106:3001/game/coexistence', {
         headers: {
           Authorization: `Bearer ${localStorage.getItem('token')}`, // Agregar el token en los headers
         },

@@ -30,7 +30,7 @@ const RegisterPapas = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://localhost:3001/registerParent', {
+      const response = await fetch('http://34.122.229.106:3001/registerParent', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

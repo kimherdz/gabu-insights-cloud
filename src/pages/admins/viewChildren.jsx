@@ -16,7 +16,7 @@ const ViewChildren = () => {
     const fetchChildren = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:3001/admin/children', {
+        const response = await axios.get('http://34.122.229.106:3001/admin/children', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setChildren(response.data);
@@ -52,7 +52,7 @@ const ViewChildren = () => {
     try {
       const token = localStorage.getItem('token');
       await axios.put(
-        'http://localhost:3001/admin/child/update',
+        'http://34.122.229.106:3001/admin/child/update',
         {
           id: updatedRow.id,
           data: updatedRow,

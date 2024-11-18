@@ -23,7 +23,7 @@ const EditAccount = () => {
     const fetchUserData = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:3001/user/profile', {
+        const response = await axios.get('http://34.122.229.106:3001/user/profile', {
           headers: { Authorization: `Bearer ${token}` },
         });
         setUserData(response.data);
@@ -34,7 +34,7 @@ const EditAccount = () => {
     };
 
     const fetchAvatars = async () => {
-      const response = await axios.get('http://localhost:3001/avatars');
+      const response = await axios.get('http://34.122.229.106:3001/avatars');
       setAvatars(response.data);
     };
 
@@ -63,7 +63,7 @@ const EditAccount = () => {
       }
 
       const response = await axios.put(
-        'http://localhost:3001/user/update',
+        'http://34.122.229.106:3001/user/update',
         updatedData,
         { headers: { Authorization: `Bearer ${token}` } }
       );

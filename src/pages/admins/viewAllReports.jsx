@@ -18,7 +18,7 @@ const ViewAllReports = () => {
     const fetchAttendances = async () => {
       try {
         const token = localStorage.getItem('token');
-        const response = await axios.get('http://localhost:3001/admin/attendances', {
+        const response = await axios.get('http://34.122.229.106:3001/admin/attendances', {
           headers: { Authorization: `Bearer ${token}` },
         });
         const formattedData = response.data.map(attendance => ({
@@ -63,7 +63,7 @@ const ViewAllReports = () => {
     try {
       const token = localStorage.getItem('token');
       await axios.put(
-        'http://localhost:3001/admin/attendance/update',
+        'http://34.122.229.106:3001/admin/attendance/update',
         {
           id: updatedRow.id,
           data: {

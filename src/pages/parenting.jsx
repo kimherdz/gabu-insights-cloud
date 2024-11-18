@@ -11,7 +11,7 @@ const Parenting = () => {
   // Función para obtener los comentarios de los coaches
   const fetchComments = async () => {
     try {
-      const response = await fetch('http://localhost:3001/attendances/comments', {
+      const response = await fetch('http://34.122.229.106:3001/attendances/comments', {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -27,7 +27,7 @@ const Parenting = () => {
   // Función para obtener los datos de la gráfica
   const fetchSkillsData = async () => {
     try {
-      const response = await fetch('http://localhost:3001/attendances/skills', {
+      const response = await fetch('http://34.122.229.106:3001/attendances/skills', {
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${localStorage.getItem('token')}`
