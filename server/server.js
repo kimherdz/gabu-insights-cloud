@@ -10,7 +10,7 @@ const SECRET_KEY = 'marta1329';
 
 
 // Middleware para manejar JSON
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors({ origin: 'https://plenary-keel-439706-f4.uc.r.appspot.com' }));
 app.use(express.json());
 
 // Middleware para autenticar el token JWT
